@@ -33,7 +33,99 @@
   </head>
 
   <body>
-    <include src="header.html"></include>
+    <nav class="navbar navbar-expand-md navbar-light bg-light text-align-end">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="SCALE-Sim" height="35px" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <!-- LIST FOR NAVBAR -->
+        <ul class="navbar-nav ml-auto">
+          <!-- HOME -->
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+
+          <!-- ABOUT -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="">About SCALE-sim</a>
+              <a class="dropdown-item" href="publication.html">Publications</a>
+            </div>
+          </li>
+
+          <!-- DOCUMENTATION -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Documentation
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <!-- Pull navigation from _data/documentation.yml -->
+
+              <a class="dropdown-item" href="">SCALE-Sim documentation</a>
+
+              <a class="dropdown-item" href="">Learning SCALE-Sim</a>
+
+              <a class="dropdown-item" href="">Reporting problems</a>
+
+              <a class="dropdown-item" href="">Status of working benchmarks</a>
+            </div>
+          </li>
+
+          <!-- Tutorials -->
+          <li class="nav-item dropdown">
+            <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Tutorials
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <!-- Pull navigation from _data/documentation.yml -->
+
+            <a class="dropdown-item" href="">Getting Started</a>
+
+            <a class="dropdown-item" href="">Scientific Talks</a>
+          </div>
+
+          </li>
+
+          <!-- CONTRIBUTING -->
+          <li class="nav-item">
+            <a class="nav-link" href="">Contributing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <main>
       <header>
         <img
@@ -147,7 +239,38 @@
       </div>
     </main>
 
-    <?php include "footer.html" ?>
-    <include src="./footer.html"></include>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <p>SCALE-Sim</p>
+            <p><a href="/about">About</a></p>
+            <p><a href="publication.html">Publications</a></p>
+            <p><a href="/contributing">Contributing</a></p>
+            <br />
+          </div>
+
+          <div class="col-12 col-sm-4">
+            <p>Docs</p>
+            <p><a href="/documentation">Tutorial Videos</a></p>
+            <p><a href="http://gem5.org/Documentation">Getting Started</a></p>
+            <p>
+              <a href="https://gem5.googlesource.com/public/gem5"
+                >Documentation</a
+              >
+            </p>
+            <br />
+          </div>
+
+          <div class="col-12 col-sm-4">
+            <p>Help</p>
+            <p><a href="https://github.com/scalesim-project/scale-sim-v2/issues">Issue Tracker</a></p>
+            <p><a href="about:blank">Contact</a></p>
+            <br />
+          </div>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
