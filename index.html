@@ -1,36 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Scalesim</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/regular.min.js"
-      integrity="sha512-jR9mIF29jOBsgismrZaiPV9H/VNWOpnILyA4MPEPgJFadfbWT0mQ5MnxCMd+JCYdoTuB2n1SkI00XkELU4ETmg=="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/solid.min.js"
-      integrity="sha512-Qc+cBMt/4/KXJ1F6nNQahXIsgPygHM4S2XWChoumV8qkpZ9oO+gBDBEpOxgbkQQ/6DlHx6cUxa5nBhEbuiR8xw=="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  </head>
+  <include src="header.html"></include>
 
   <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light text-align-end">
@@ -148,7 +118,7 @@
             Sources
           </button></a
         >
-        <a href="https://arxiv.org/abs/1811.02883"
+        <a href="https://ieeexplore.ieee.org/abstract/document/9238602"
           ><button type="button" class="btn btn-outline-primary">
             Reference
           </button></a
@@ -239,37 +209,6 @@
       </div>
     </main>
 
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-4">
-            <p>SCALE-Sim</p>
-            <p><a href="/about">About</a></p>
-            <p><a href="publication.html">Publications</a></p>
-            <p><a href="/contributing">Contributing</a></p>
-            <br />
-          </div>
-
-          <div class="col-12 col-sm-4">
-            <p>Docs</p>
-            <p><a href="/documentation">Tutorial Videos</a></p>
-            <p><a href="http://gem5.org/Documentation">Getting Started</a></p>
-            <p>
-              <a href="https://gem5.googlesource.com/public/gem5"
-                >Documentation</a
-              >
-            </p>
-            <br />
-          </div>
-
-          <div class="col-12 col-sm-4">
-            <p>Help</p>
-            <p><a href="https://github.com/scalesim-project/scale-sim-v2/issues">Issue Tracker</a></p>
-            <p><a href="about:blank">Contact</a></p>
-            <br />
-          </div>
-        </div>
-      </div>
-    </footer>
+    <include src="footer.html"></include>
   </body>
 </html>
