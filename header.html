@@ -1,31 +1,92 @@
-<head>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <title>Scalesim</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-    crossorigin="anonymous"
-  />
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/regular.min.js"
-    integrity="sha512-jR9mIF29jOBsgismrZaiPV9H/VNWOpnILyA4MPEPgJFadfbWT0mQ5MnxCMd+JCYdoTuB2n1SkI00XkELU4ETmg=="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/solid.min.js"
-    integrity="sha512-Qc+cBMt/4/KXJ1F6nNQahXIsgPygHM4S2XWChoumV8qkpZ9oO+gBDBEpOxgbkQQ/6DlHx6cUxa5nBhEbuiR8xw=="
-    crossorigin="anonymous"
-  ></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
+<nav class="navbar navbar-expand-md navbar-light bg-light text-align-end">
+  <a class="navbar-brand" href="index.html">
+    <img src="images/logo.png" alt="SCALE-Sim" height="35px" />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    <!-- LIST FOR NAVBAR -->
+    <ul class="navbar-nav ml-auto">
+      <!-- HOME -->
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+
+      <!-- ABOUT -->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdownMenuLink"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          About
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="">About SCALE-sim</a>
+          <a class="dropdown-item" href="publication.html">Publications</a>
+        </div>
+      </li>
+
+      <!-- DOCUMENTATION -->
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          id="navbarDropdownMenuLink"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Documentation
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <!-- Pull navigation from _data/documentation.yml -->
+
+          <a class="dropdown-item" href="">SCALE-Sim documentation</a>
+
+          <a class="dropdown-item" href="">Learning SCALE-Sim</a>
+
+          <a class="dropdown-item" href="">Reporting problems</a>
+
+          <a class="dropdown-item" href="">Status of working benchmarks</a>
+        </div>
+      </li>
+
+      <!-- Tutorials -->
+      <li class="nav-item dropdown">
+        <a
+        class="nav-link dropdown-toggle"
+        id="navbarDropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Tutorials
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <!-- Pull navigation from _data/documentation.yml -->
+
+        <a class="dropdown-item" href="">Getting Started</a>
+
+        <a class="dropdown-item" href="">Scientific Talks</a>
+      </div>
+
+      </li>
+
+      <!-- CONTRIBUTING -->
+      <li class="nav-item">
+        <a class="nav-link" href="">Contributing</a>
+      </li>
+    </ul>
+  </div>
+</nav>
