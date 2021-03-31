@@ -61,9 +61,36 @@
     <main>
       <br /><br />
       <div class="container">
-        <h1 class="title">Getting Started</h1>
+        <h1 class="title">Getting Started: SCALE-Sim in 30 seconds.</h1>
         <br />
-        Will follow soon.
+        <h2> Installing the package</h2>
+
+        <p>Getting started is simple! SCALE-Sim is completely written in python and is available both as a package and could be run from source.</p>
+
+        <p>You can install SCALE-Sim in your environment using the following command</p>
+
+        <pre><code>$ pip3 install scalesim</code></pre>
+
+        <p>Alternatively you can install the package from the source as well</p>
+
+        <pre><code>$ python3 setup.py install</code></pre>
+        <h2> Launching a run</h2>
+
+        <p>SCALE-Sim can be run by using the scale.py script from the repository and providing the paths to the architecture configuration, and the topology descriptor csv file.</p>
+
+        <pre><code>$ python3 scale.py -c <path_to_config_file> -t <path_to_topology_file></code></pre>
+
+        <p>Try it now in <a href="https://github.com/scalesim-project/scalesim-tutorial-materials/blob/main/scaledemo.ipynb">this</a> jupyter notebook.</p>
+
+        <br><h2> Running from source</h2>
+
+        <p>The above method uses the installed package for running the simulator. In cases where you would like to run directly from the source, the following command should be used instead.</p>
+
+        <pre><code>$ python3 <scale_sim_repo_root>/scalesim/scale.py -c <path_to_config_file> -t <path_to_topology_file></code></pre>
+
+        <p>If you are running from sources for the first time and do not have all the dependencies installed, please install them first using the following command.</p>
+
+        <pre><code>$ pip3 install -r <scale_sim_repo_root>/requirements.txt</code></pre>
       </div>
 
       <!-- button to scroll to top of page -->
