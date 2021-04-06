@@ -61,21 +61,34 @@
     <main>
       <br /><br />
       <div class="container">
-        <h1 class="title">Tutorials</h1>
+        <h1 class="title">SCALE-Sim Tutorial - ASPLOS 2021</h1>
         <br />
 
-        <p> You can learn SCALE-Sim by following one our our tutorials that we provide here, including videos, code examples and easy-to-use Jupyter notebooks with examples!</p>
+        <p>Date: April 16, 2021 </p>
 
-        <h2> ASPLOS 2021 </h2>
-        <strong> Learnings:</strong>
+        <h2>Organizers</h2>
         <ul>
-          <li>How to start</li>
-          <li>The first simple experiment</li>
-          <li>Extending SCALE-Sim</li>
-          <li>Integrating SCALE-Sim in your simulator</li>
+          <li><a href="https://anands09.github.io/"><strong>Ananda Samajdar</strong></a> (Georgia Tech)</li>
+          <li><a href="https://www.ice.rwth-aachen.de/institute/staff/postdoctoral-reseachers/jan-moritz-joseph/"><strong>Jan Moritz Joseph</strong></a> (RWTH Aachen University)</li>
+          <li><a href="http://www.yuhaozhu.com/"><strong>Yuhao Zhu</strong></a> (University of Rochester)</li>
+          <li><a href="https://www.seas.harvard.edu/person/paul-whatmough"><strong>Paul Whatmough</strong></a> (Arm ML Research Lab, Harvard University)</li>
+          <li><a href="https://tusharkrishna.ece.gatech.edu/"><strong>Tushar Krishna</strong></a> (Georgia Tech)</li>
         </ul>
-        You can find our ASPLOS 2021 tutorial <a href="https://scalesim-project.github.io/tutorials/2021-asplos.html"
-        >here</a.
+
+        <h2>Overview</h2>
+        <p>
+          <img
+            src="tutorials/overview.png"
+            width="90%"
+          />
+        </p>
+
+        <p>
+          SCALE-SIM is a cycle-accurate CNN accelerator simulator that provides timing, power/energy, memory bandwidth and memory access trace results for a specified accelerator configuration and neural network architecture. It is based on the systolic array architecture, used in various accelerators like Google’s TPU, Xilinx XDNN etc.
+        </p>
+        <p>
+           SCALE-SIM enables research into DNN accelerator architectures and is also suitable for system-level studies. Designing efficient DNN accelerator is a difficult problem which requires searching in an intricate trade-off space with large number of architectural parameters. Moreover, recent DNN workloads are increasingly becoming memory bound due to increase in model sizes. A simulation infrastructure like SCALE-Sim which can provide cycle accurate estimates of performance, memory accesses, and other design metrics is therefore a vital tool to enable fast and reliable design cycles. Unlike related infrastructure, which rely on analytical models to estimate the performance and operating cost of accelerator designs, SCALE-Sim lets designers to capture the behavior of a simulator at each cycle of operation. The tool reads workload configurations as layer hyperparameters, and architectural configurations as inputs, and then generates cycle accurate multilevel memory traces and lumped performance metrics as outputs
+      </p>
 
       </div>
 
