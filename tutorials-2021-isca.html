@@ -1,0 +1,279 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Scalesim</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/regular.min.js"
+      integrity="sha512-jR9mIF29jOBsgismrZaiPV9H/VNWOpnILyA4MPEPgJFadfbWT0mQ5MnxCMd+JCYdoTuB2n1SkI00XkELU4ETmg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/solid.min.js"
+      integrity="sha512-Qc+cBMt/4/KXJ1F6nNQahXIsgPygHM4S2XWChoumV8qkpZ9oO+gBDBEpOxgbkQQ/6DlHx6cUxa5nBhEbuiR8xw=="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="csi.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
+
+    <title>SCALE-Sim: Tutorials</title>
+
+    <!-- SITE FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+  </head>
+
+  <body>
+    <div data-include="header.html"></div>
+    <main>
+      <br /><br />
+      <div class="container">
+        <h1 class="title">SCALE-Sim Tutorial - ISCA 2021</h1>
+        <br />
+
+        <p>Date: June 19, 2021 </p>
+
+        <h2>Organizers</h2>
+        <ul>
+          <li><a href="https://anands09.github.io/"><strong>Ananda Samajdar</strong></a> (Georgia Tech)</li>
+          <li><a href="https://www.ice.rwth-aachen.de/institute/staff/postdoctoral-reseachers/jan-moritz-joseph/"><strong>Jan Moritz Joseph</strong></a> (RWTH Aachen University)</li>
+          <li><a href="https://www.seas.harvard.edu/person/paul-whatmough"><strong>Paul Whatmough</strong></a> (Arm ML Research Lab, Harvard University)</li>
+          <li><a href="https://tusharkrishna.ece.gatech.edu/"><strong>Tushar Krishna</strong></a> (Georgia Tech)</li>
+        </ul>
+
+        <h2>Overview</h2>
+        <p>
+          <img
+            src="images/overview.png"
+            width="100%"
+          />
+        </p>
+
+        <p>
+          SCALE-SIM is a cycle-accurate CNN accelerator simulator that provides timing, power/energy, memory bandwidth and memory access trace results for a specified accelerator configuration and neural network architecture. It is based on the systolic array architecture, used in various accelerators like Google’s TPU, Xilinx XDNN etc.
+        </p>
+        <p>
+           SCALE-SIM enables research into DNN accelerator architectures and is also suitable for system-level studies. Designing efficient DNN accelerator is a difficult problem which requires searching in an intricate trade-off space with large number of architectural parameters. Moreover, recent DNN workloads are increasingly becoming memory bound due to increase in model sizes. A simulation infrastructure like SCALE-Sim which can provide cycle accurate estimates of performance, memory accesses, and other design metrics is therefore a vital tool to enable fast and reliable design cycles. Unlike related infrastructure, which rely on analytical models to estimate the performance and operating cost of accelerator designs, SCALE-Sim lets designers to capture the behavior of a simulator at each cycle of operation. The tool reads workload configurations as layer hyperparameters, and architectural configurations as inputs, and then generates cycle accurate multilevel memory traces and lumped performance metrics as outputs
+      </p>
+
+      <h2>Schedule (June 19, 2021; Eastern Time)</h2>
+      <p> Remark: Please login using your ISCA credentials and
+        then navigate to the zoom room for the tutorial.</p>
+      <table style="width:100%">
+        <colgroup>
+           <col span="1" style="width: 10%;">
+           <col span="1" style="width: 50%;">
+           <col span="1" style="width: 15%;">
+           <col span="1" style="width: 25%;">
+        </colgroup>
+        <tbody>
+          <tr style="border-bottom:1px solid black;">
+            <th><strong>Time</strong></th>
+            <th><strong>Agenda</strong></th>
+            <th><strong>Presenter</strong></th>
+            <th><strong>Resources</strong></th>
+          </tr>
+          <tr style="border-bottom:1px solid black;">
+            <td>9:10-9:30</td>
+            <td>Introduction to DNNs and Accelerator Design</td>
+            <td>Tushar, Paul</td>
+            <td>
+              Slides (Available after the tutorial)
+              <!-- Anand: This should be replaced by the ISCA recording and materials
+              <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/slides/SCALE-Sim_Tutorial_ASPLOS2021_1_Intro.pdf">[Slides],</a>
+              <a href="https://youtu.be/IE8idi9B_Do">[Youtube]</a>
+            -->
+            </td>
+          </tr>
+
+          <tr style="border-bottom:1px solid black;">
+            <td>9:30-9:55</td>
+            <td>Overview of SCALE-Sim</td>
+            <td>Anand</td>
+            <td>
+                Slides (Available after the tutorial)
+               <!-- Anand: This should be replaced by the ISCA recording and materials
+                <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/slides/SCALE-Sim_Tutorial_ASPLOS2021_2_Overview.pdf">[Slides],</a>
+                <a href="https://youtu.be/AWgzEK4gsvg">[Youtube],</a>
+                <a href="https://colab.research.google.com/drive/1ORfJNXHRRlVSTL0R4kGJX-1a-YXnOKj1">[Colab Notebook]</a>
+              -->
+            </td>
+          </tr>
+
+          <tr style="border-bottom:1px solid black;">
+            <td>10:00-10:30</td>
+            <td>Tutorial 1: Design Space Exploration using SCALE-Sim</td>
+            <td>Anand</td>
+            <td>
+                Slides (Available after the tutorial)
+                <!-- Anand: This should be replaced by the ISCA recording and materials
+                <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/slides/SCALE-Sim_Tutorial_ASPLOS2021_3_Tutorial1.pdf">[Slides],</a>
+                <a href="https://youtu.be/P0rkGWQF2xY">[Youtube]</a>
+               -->
+                <!-- Anand: We will provide the material again in the next tutorial -->
+                <!--<a href="https://github.com/scalesim-project/scalesim-tutorial-materials/blob/main/scalesim_tutorial1_template.ipynb">[material]</a> -->
+            </td>
+          </tr>
+
+          <tr style="border-bottom:1px solid black;">
+            <td>10:30-11:00</td>
+            <td>Tutorial 2: Modifying SCALE-Sim to add custom features</td>
+            <td>Moritz</td>
+            <td>
+              Slides (Available after the tutorial)
+              <!-- Anand: This should be replaced by the ISCA recording and materials
+              <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/slides/SCALE-Sim_Tutorial_ASPLOS2021_4_Tutorial2.pdf">[Slides],</a>
+              <a href="https://youtu.be/aonxi6sDgZE">[Youtube]</a>
+              -->
+              <!-- Anand: We will add this back again in the next tutorial
+                <a href="https://github.com/scalesim-project/scale-sim-v2/tree/tutorial/asplos%2Ftutorial2">[code (github)]</a>,
+                <a href="https://github.com/scalesim-project/tutorial-asplos-2021/blob/main/tutorial2.sh">[helper script]</a>,
+                <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/double_buffered_tutorial2_scratchpad_mem.py">[new memory]</a>,
+                <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/single_layer_sim.py">[include memory]</a>
+              -->
+            </td>
+          </tr>
+
+          <tr style="border-bottom:1px solid black;">
+            <td>11:00-11:45</td>
+            <td>Tutorial 3: Krittika: Simulation of distributed GEMM computation using SCALE-Sim API</td>
+            <td>Anand</td>
+            <td>
+              Slides (Available after the tutorial)
+              <!-- Anand: This should be replaced by the ISCA recording and materials
+              <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/slides/SCALE-Sim_Tutorial_ASPLOS2021_5_Tutorial3.pdf">[Slides],</a>
+              <a href="https://youtu.be/bHshg90aRvA">[Youtube]</a>
+              -->
+            </td>
+          </tr>
+
+          <tr style="border-bottom:1px solid black;">
+            <td>11:45-Noon</td>
+            <td>Closing Remarks</td>
+            <td>Tushar</td>
+            <td>
+              Slides (Available after the tutorial)
+            </td>
+          </tr>
+
+          <!-- Anand: We do not need this section in ISCA
+          <tr style="border-bottom:1px solid black;">
+            <td>1:30-2:00</td>
+            <td>Plenum: Discussion on future roadmap, planned features, and a ideas from the community</td>
+            <td>Yuhao</td>
+            <td>
+              <a href="https://github.com/scalesim-project/tutorial-asplos-2021/raw/main/slides/SCALE-Sim_Tutorial_ASPLOS2021_6_Plenum.pdf">[Slides]</a>
+            </td>
+          </tr>
+        -->
+
+        </tbody>
+      </table>
+
+      <br />
+      <h2>Resources</h2>
+      <ul>
+        <!-- Anand: We will add the files back in the next tutorial
+          <li><a href="https://github.com/scalesim-project/scalesim-project.github.io/blob/6b74417abee450bc4eaefefa8504a7c2320faeae/ScaleSimBundle.zip"> Files for tutorial </a> </li>
+        -->
+        <li><a href="https://github.com/scalesim-project/scale-sim-v2">SCALE-Sim v2 Github</a></li>
+        <li><a href='#'>Krittika Github</a></li>
+        <li><a href="https://pypi.org/project/scalesim/">SCALE-Sim pip repo</a></li>
+      </ul>
+
+
+      <h2>Relevant Papers</h2>
+      <ul>
+        <li>SCALE-Sim v2 used for scaling study <a href="https://anands09.github.io/">ISAPSS 2020</a></li>
+        <li>SCALE-Sim v1 <a href="https://arxiv.org/abs/1811.0288">Arxiv</a></li>
+      </ul>
+
+      </div>
+
+      <!-- button to scroll to top of page -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">△</button>
+    </main>
+    <div data-include="footer.html"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      import commentBox from "commentbox.io";
+      // or
+      const commentBox = require("commentbox.io");
+      // or if using the CDN, it will be available as a global "commentBox" variable.
+
+      commentBox("my-project-id");
+    </script>
+  </body>
+</html>
