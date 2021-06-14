@@ -83,10 +83,36 @@
         </p>
 
         <p>
-          SCALE-SIM is a cycle-accurate CNN accelerator simulator that provides timing, power/energy, memory bandwidth and memory access trace results for a specified accelerator configuration and neural network architecture. It is based on the systolic array architecture, used in various accelerators like Google’s TPU, Xilinx XDNN etc.
+          SCALE-SIM is a cycle-accurate CNN accelerator simulator that provides
+          timing, power/energy, memory bandwidth and memory access trace results
+          for a specified accelerator configuration and neural network architecture.
+          It is based on the systolic array architecture, used in various
+          accelerators like Google’s TPU, Xilinx XDNN etc.
+
+          Krittika is a simulator for distributed processing of GEMM workloads
+          developed using SCALE-Sim as an API.
+          Krittika models a collection of systolic arrays working in a distributed
+          setting with configurable grid dimensions and memory sizes.
         </p>
         <p>
-           SCALE-SIM enables research into DNN accelerator architectures and is also suitable for system-level studies. Designing efficient DNN accelerator is a difficult problem which requires searching in an intricate trade-off space with large number of architectural parameters. Moreover, recent DNN workloads are increasingly becoming memory bound due to increase in model sizes. A simulation infrastructure like SCALE-Sim which can provide cycle accurate estimates of performance, memory accesses, and other design metrics is therefore a vital tool to enable fast and reliable design cycles. Unlike related infrastructure, which rely on analytical models to estimate the performance and operating cost of accelerator designs, SCALE-Sim lets designers to capture the behavior of a simulator at each cycle of operation. The tool reads workload configurations as layer hyperparameters, and architectural configurations as inputs, and then generates cycle accurate multilevel memory traces and lumped performance metrics as outputs
+           Both the simulators enable research into DNN accelerator architectures
+           and are also suitable for system-level studies.
+           Designing efficient DNN accelerator is a difficult problem which
+           requires searching in an intricate trade-off space with large number
+           of architectural parameters.
+
+           Moreover, recent DNN workloads are increasingly becoming memory bound
+           due to increase in model sizes. A simulation infrastructure like
+           SCALE-Sim or Krittika which can provide cycle accurate estimates of performance,
+           memory accesses, and other design metrics is therefore a vital tool
+           to enable fast and reliable design cycles. Unlike related infrastructure,
+           which rely on analytical models to estimate the performance and operating
+           cost of accelerator designs, these tools let designers to capture the
+           behavior of a simulator at each cycle of operation.
+
+           Both the tools read workload configurations as layer hyperparameters, and
+           architectural configurations as inputs,
+           and then generates cycle accurate multilevel memory traces and lumped performance metrics as outputs
       </p>
 
       <h2>Schedule (June 19, 2021; Eastern Time)</h2>
@@ -217,7 +243,7 @@
 
       <h2>Relevant Papers</h2>
       <ul>
-        <li>SCALE-Sim v2 used for scaling study <a href="https://anands09.github.io/">ISAPSS 2020</a></li>
+        <li>SCALE-Sim v2 used for scaling study <a href="https://cpb-us-w2.wpmucdn.com/sites.gatech.edu/dist/c/332/files/2020/03/scalesim_ispass2020.pdf">ISAPSS 2020</a></li>
         <li>SCALE-Sim v1 <a href="https://arxiv.org/abs/1811.0288">Arxiv</a></li>
       </ul>
 
