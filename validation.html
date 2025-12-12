@@ -1,0 +1,290 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Scalesim</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/regular.min.js"
+      integrity="sha512-jR9mIF29jOBsgismrZaiPV9H/VNWOpnILyA4MPEPgJFadfbWT0mQ5MnxCMd+JCYdoTuB2n1SkI00XkELU4ETmg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/solid.min.js"
+      integrity="sha512-Qc+cBMt/4/KXJ1F6nNQahXIsgPygHM4S2XWChoumV8qkpZ9oO+gBDBEpOxgbkQQ/6DlHx6cUxa5nBhEbuiR8xw=="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="csi.min.js"></script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SCALE-Sim: Validation Results</title>
+
+    <!-- SITE FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+      .validation-image {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      .validation-section {
+        margin: 40px 0;
+      }
+      .validation-subsection {
+        margin: 30px 0;
+      }
+      .validation-subsection h3 {
+        color: #333;
+        margin-bottom: 15px;
+      }
+      .validation-section h2 {
+        color: #1a1a1a;
+        border-bottom: 3px solid #F0A216;
+        padding-bottom: 10px;
+        margin-bottom: 25px;
+      }
+      .explanation-text {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #444;
+        margin: 25px 0;
+        text-align: justify;
+      }
+      .explanation-text strong {
+        color: #000;
+      }
+      .explanation-text ol {
+        margin: 15px 0;
+        padding-left: 25px;
+      }
+      .explanation-text ol li {
+        margin: 10px 0;
+      }
+      .image-container {
+        text-align: center;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div data-include="header.html"></div>
+    <main>
+      <br /><br />
+      <div class="container">
+        <h1 class="title">Validation Results</h1>
+        <br />
+
+        <!-- TPU-v4 Section -->
+        <div class="validation-section">
+          <h2>TPU-v4</h2>
+
+          <div class="validation-subsection">
+            <h3>GEMM dimensions &lt;128</h3>
+            <div class="image-container">
+              <img src="images/validation/v4_128.webp" alt="TPU-v4 validation results for GEMM dimensions less than 128" class="validation-image">
+            </div>
+          </div>
+
+          <div class="validation-subsection">
+            <h3>GEMM dimensions 128-1024</h3>
+            <div class="image-container">
+              <img src="images/validation/v4_1024.webp" alt="TPU-v4 validation results for GEMM dimensions 128-1024" class="validation-image">
+            </div>
+          </div>
+
+          <div class="validation-subsection">
+            <h3>GEMM dimensions 1024-4096</h3>
+            <div class="image-container">
+              <img src="images/validation/v4_4096.webp" alt="TPU-v4 validation results for GEMM dimensions 1024-4096" class="validation-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- TPU-v6e Section -->
+        <div class="validation-section">
+          <h2>TPU-v6e</h2>
+
+          <div class="validation-subsection">
+            <h3>GEMM dimensions &lt;128</h3>
+            <div class="image-container">
+              <img src="images/validation/v6e_128.webp" alt="TPU-v6e validation results for GEMM dimensions less than 128" class="validation-image">
+            </div>
+          </div>
+
+          <div class="validation-subsection">
+            <h3>GEMM dimensions 128-1024</h3>
+            <div class="image-container">
+              <img src="images/validation/v6e_1024.webp" alt="TPU-v6e validation results for GEMM dimensions 128-1024" class="validation-image">
+            </div>
+          </div>
+
+          <div class="validation-subsection">
+            <h3>GEMM dimensions 1024-4096</h3>
+            <div class="image-container">
+              <img src="images/validation/v6e_4096.webp" alt="TPU-v6e validation results for GEMM dimensions 1024-4096" class="validation-image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Explanation Text -->
+        <div class="validation-section">
+          <div class="explanation-text">
+            <p>To evaluate the accuracy of our simulator, we performed a comprehensive regression analysis comparing SCALE-Sim's predicted GEMM execution cycles against <strong>measured fusion-kernel runtimes</strong> on Google TPU v4 and TPU v6e across a wide range of matrix dimensions (&lt;128, 128–1024, and 1024–4096).</p>
+
+            <p>The TPU fusion time represents <strong>on-chip execution only</strong>—it does not include HBM-to-core data transfer—therefore isolating the core compute behavior of the TPU's systolic array and fusion engine.</p>
+
+            <p>In each regression figure, the four sub-plots provide a complete statistical view of the simulator's prediction quality:</p>
+
+            <ol>
+              <li><strong>Scale-Sim Cycles vs. Fusion Average (top-left)</strong>
+                <ul style="list-style-type: none; padding-left: 20px;">
+                  <li><strong>X-axis:</strong> SCALE-Sim predicted total cycles for the GEMM under the chosen dataflow.</li>
+                  <li><strong>Y-axis:</strong> Measured TPU fusion-kernel time (µs).</li>
+                  <li>This plot presents the direct relationship between simulator predictions and TPU runtime, along with the fitted linear regression line.</li>
+                </ul>
+              </li>
+              <li><strong>Residual Plot (top-right)</strong>
+                <ul style="list-style-type: none; padding-left: 20px;">
+                  <li><strong>X-axis:</strong> Predicted TPU fusion time (µs) from the regression model.</li>
+                  <li><strong>Y-axis:</strong> Residuals = measured fusion time − predicted fusion time (µs).</li>
+                  <li>This view shows how prediction errors are distributed across the range of predicted runtimes and whether any systematic bias exists.</li>
+                </ul>
+              </li>
+              <li><strong>Actual vs. Predicted Values (bottom-left)</strong>
+                <ul style="list-style-type: none; padding-left: 20px;">
+                  <li><strong>X-axis:</strong> Actual measured TPU fusion time (µs).</li>
+                  <li><strong>Y-axis:</strong> Predicted fusion time (µs) from the regression model.</li>
+                  <li>The dashed diagonal line represents perfect prediction (y = x), allowing visual inspection of the fit tightness.</li>
+                </ul>
+              </li>
+              <li><strong>Distribution of Residuals (bottom-right)</strong>
+                <ul style="list-style-type: none; padding-left: 20px;">
+                  <li><strong>X-axis:</strong> Residuals (µs).</li>
+                  <li><strong>Y-axis:</strong> Frequency (number of GEMM samples).</li>
+                  <li>This histogram summarizes overall prediction error, verifying that most residuals cluster tightly around zero.</li>
+                </ul>
+              </li>
+            </ol>
+
+            <p>Across all six TPU and dimension configurations, SCALE-Sim demonstrates a strong linear correlation with real TPU compute behavior. The regression models consistently achieve high R² values (up to 0.99), low RMSE, and stable residual distributions. These results show that the simulator faithfully captures both compute-bound and memory-influenced GEMM performance trends on modern systolic-array accelerators.</p>
+
+            <p>The close alignment between predicted cycles and measured fusion times—combined with regression slopes near 1 and small intercepts—confirms SCALE-Sim's ability to model execution latency with high fidelity. The residual and histogram plots further reinforce that prediction errors remain centered around zero with small variance, demonstrating robustness across GPU generations and matrix sizes.</p>
+
+            <p>Overall, this validation confirms that <strong>SCALE-Sim provides reliable, cycle-level performance estimates for GEMM workloads on TPU-class architectures</strong>, enabling researchers and practitioners to explore dataflows, evaluate architectural designs, and develop cross-stack performance analyses with confidence.</p>
+          </div>
+        </div>
+
+        <!-- Adaptive Dataflow Section -->
+        <div class="validation-section">
+          <h2>Adaptive Dataflow</h2>
+
+          <div class="image-container">
+            <img src="images/validation/ws_dataflow.webp" alt="Weight-Stationary dataflow validation results" class="validation-image">
+          </div>
+
+          <div class="image-container">
+            <img src="images/validation/adaptive_is_ws_dataflow.webp" alt="Adaptive IS/WS dataflow validation results" class="validation-image">
+          </div>
+
+          <div class="explanation-text">
+            <p>SCALE-Sim supports both <strong>Weight-Stationary (WS)</strong> and <strong>Input-Stationary (IS)</strong> dataflow modes, allowing users to manually choose which stationary pattern to simulate. The simulator does not attempt to infer the TPU's actual dataflow; instead, users evaluate both modes depending on the workload. To validate that SCALE-Sim's dataflow models are correct, we compare simulator predictions under WS, IS, and the <strong>best-of-two</strong> selection against measured TPU fusion-kernel times.</p>
+
+            <p>The TPU time used in this evaluation is the <strong>fusion kernel runtime</strong>, representing only <strong>on-chip execution</strong> within the systolic array and fusion engine. It does <strong>not</strong> include HBM-to-core data transfers, allowing us to isolate and evaluate pure compute behavior.</p>
+
+            <p>Each scatter plot uses:</p>
+
+            <ul>
+              <li><strong>X-axis:</strong> SCALE-Sim predicted total GEMM cycles under a specific dataflow configuration (WS, IS, or Best-of-WS/IS).</li>
+              <li><strong>Y-axis:</strong> Measured TPU fusion-kernel time (µs), i.e., the on-chip compute latency observed during execution.</li>
+            </ul>
+
+            <p>When we force SCALE-Sim to use a <strong>single incorrect dataflow</strong> (e.g., simulating everything in WS even when TPU benefits more from IS), the correlation to TPU runtimes is noticeably weaker (Correlation = <strong>0.499</strong>). In contrast, when we simulate both WS and IS and take the <strong>smaller</strong> of the two cycle counts for each GEMM, the correlation improves significantly (Correlation = <strong>0.751</strong>).</p>
+
+            <p>This result demonstrates two important points:</p>
+
+            <ol>
+              <li><strong>SCALE-Sim's WS and IS execution models are both accurate</strong>, since the real TPU runtime consistently aligns with the better of the two predictions.</li>
+              <li>TPU hardware behavior frequently corresponds to whichever dataflow offers better reuse for the given GEMM—mirrored by the simulator's "best-of-two" prediction strategy.</li>
+            </ol>
+
+            <p>Overall, this validation confirms that SCALE-Sim provides <strong>faithful cycle-level modeling across multiple dataflow strategies</strong>, and that its user-selectable WS/IS simulation modes accurately reflect TPU-class systolic-array behavior.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- button to scroll to top of page -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">△</button>
+    </main>
+    <div data-include="footer.html"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
