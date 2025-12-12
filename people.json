@@ -1,0 +1,83 @@
+{
+  "v3_contributors": [
+    {
+      "image": "images/people/ritik.heic",
+      "name": "Ritik Raj",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": "",
+      "role": "Lead Dev/Maintainer"
+    },
+    {
+      "image": "images/people/sarbartha.jpg",
+      "name": "Sarbartha Banerjee",
+      "affiliation": "University of Texas at Austin",
+      "currently_at": "Georgia Institute of Technology"
+    },
+    {
+      "image": "images/people/nikhil.png",
+      "name": "Nikhil Chandra Boopalam Srinivas",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": "Nvidia"
+    },
+    {
+      "image": "images/people/zishen.jpg",
+      "name": "Zishen Wan",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": ""
+    },
+    {
+      "image": "images/people/jianming.jpg",
+      "name": "Jianming Tong",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": ""
+    }
+  ],
+  "validation": [
+    {
+      "image": "images/people/jingtian.png",
+      "name": "Jingtian Dang",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": ""
+    }
+  ],
+  "advisors": [
+    {
+      "image": "images/people/samajdar.png",
+      "name": "Ananda Samajdar",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": "IBM Research"
+    },
+    {
+      "image": "images/people/krishna.png",
+      "name": "Tushar Krishna",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": ""
+    }
+  ],
+  "v2_contributors": [
+    {
+      "image": "images/people/samajdar.png",
+      "name": "Ananda Samajdar",
+      "affiliation": "Georgia Institute of Technology",
+      "currently_at": "IBM Research"
+    },
+    {
+      "image": "images/people/joseph-sq.jpg",
+      "name": "Jan Moritz Joseph",
+      "affiliation": "RWTH Aachen University",
+      "currently_at": ""
+    },
+    {
+      "image": "images/people/zhu.png",
+      "name": "Yuhao Zhu",
+      "affiliation": "University of Rochester",
+      "currently_at": ""
+    },
+    {
+      "image": "images/people/whatmough.png",
+      "name": "Paul Whatmough",
+      "affiliation": "Arm",
+      "currently_at": "Qualcomm"
+    }
+  ]
+}

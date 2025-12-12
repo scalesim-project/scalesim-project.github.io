@@ -30,18 +30,10 @@
     ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="csi.min.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
 
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
-    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
-
-    <!-- Load the element definition -->
-    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-
 
     <title>SCALE-Sim: Contact</title>
 
@@ -54,6 +46,68 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
+    <style>
+      .team-section {
+        margin: 40px 0;
+      }
+
+      .section-title {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #F0A216;
+      }
+
+      .person-card {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .person-image {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .person-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      .person-affiliation {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 5px;
+      }
+
+      .person-currently {
+        font-size: 0.85rem;
+        color: #888;
+        font-style: italic;
+      }
+
+      .person-role {
+        font-size: 0.85rem;
+        color: #0095af;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+
+      .row-divider {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+    </style>
+
   </head>
 
   <body>
@@ -63,55 +117,41 @@
       <div class="container">
         <h1 class="title">The Team</h1>
         <br />
-        <img
-          src="images/people/samajdar.png"
-          height="250px;"
-        />
-        <img
-          src="images/people/joseph-sq.jpg"
-          height="250px;"
-        />
-        <img
-          src="images/people/zhu.png"
-          height="250px;"
-        />
-        <img
-          src="images/people/whatmough.png"
-          height="250px;"
-        />
-        <img
-          src="images/people/krishna.png"
-          height="250px;"
-        />
-        <br><br>
-        <h2> Contributors </h2>
-          <ul>
-            <li>
-              <p>
-                Ananda Samajdar, Georgia Institute of Technology
-              </p>
-            </li>
-            <li>
-              <p>
-                Jan Moritz Joseph, RWTH Aachen University
-              </p>
-            </li>
-            <li>
-              <p>
-                Yuhao Zhu, University of Rochester
-              </p>
-            </li>
-            <li>
-              <p>
-                Paul Whatmough, Arm ML Research Lab, Harvard University
-              </p>
-            </li>
-            <li>
-              <p>
-                Tushar Krishna, Georgia Institute of Technology
-              </p>
-            </li>
-          </ul>
+
+        <!-- Row 1: v3 Contributors -->
+        <div class="team-section">
+          <h2 class="section-title">v3 Contributors</h2>
+          <div class="row-divider" id="v3-contributors">
+            <!-- Dynamically loaded -->
+          </div>
+        </div>
+
+        <!-- Row 2: Validation & Advisors -->
+        <div class="team-section">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="section-title">Validation</h3>
+              <div class="row-divider" id="validation-team">
+                <!-- Dynamically loaded -->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3 class="section-title">Advisors</h3>
+              <div class="row-divider" id="advisors">
+                <!-- Dynamically loaded -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: v2 Contributors -->
+        <div class="team-section">
+          <h2 class="section-title">v2 Contributors</h2>
+          <div class="row-divider" id="v2-contributors">
+            <!-- Dynamically loaded -->
+          </div>
+        </div>
+
       </div>
 
       <!-- button to scroll to top of page -->
@@ -134,7 +174,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
-    <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 
     <script>
       // When the user scrolls down 20px from the top of the document, show the button
@@ -159,12 +198,87 @@
         document.documentElement.scrollTop = 0;
       }
 
-      import commentBox from "commentbox.io";
-      // or
-      const commentBox = require("commentbox.io");
-      // or if using the CDN, it will be available as a global "commentBox" variable.
+      // Load team members from people.json
+      async function loadTeam() {
+        try {
+          const response = await fetch('people.json');
+          const peopleData = await response.json();
 
-      commentBox("my-project-id");
+          // Function to create person card
+          function createPersonCard(person) {
+            const card = document.createElement('div');
+            card.className = 'person-card';
+
+            const img = document.createElement('img');
+            img.src = person.image;
+            img.alt = person.name;
+            img.className = 'person-image';
+            img.onerror = function() {
+              this.src = 'images/people/placeholder.png'; // Fallback image
+            };
+
+            const name = document.createElement('div');
+            name.className = 'person-name';
+            name.textContent = person.name;
+
+            const affiliation = document.createElement('div');
+            affiliation.className = 'person-affiliation';
+            affiliation.textContent = person.affiliation;
+
+            card.appendChild(img);
+            card.appendChild(name);
+            card.appendChild(affiliation);
+
+            // Add role if present
+            if (person.role) {
+              const role = document.createElement('div');
+              role.className = 'person-role';
+              role.textContent = person.role;
+              card.appendChild(role);
+            }
+
+            // Add currently_at if present
+            if (person.currently_at) {
+              const currently = document.createElement('div');
+              currently.className = 'person-currently';
+              currently.textContent = 'Currently at: ' + person.currently_at;
+              card.appendChild(currently);
+            }
+
+            return card;
+          }
+
+          // Load v3 contributors
+          const v3Container = document.getElementById('v3-contributors');
+          peopleData.v3_contributors.forEach(person => {
+            v3Container.appendChild(createPersonCard(person));
+          });
+
+          // Load validation team
+          const validationContainer = document.getElementById('validation-team');
+          peopleData.validation.forEach(person => {
+            validationContainer.appendChild(createPersonCard(person));
+          });
+
+          // Load advisors
+          const advisorsContainer = document.getElementById('advisors');
+          peopleData.advisors.forEach(person => {
+            advisorsContainer.appendChild(createPersonCard(person));
+          });
+
+          // Load v2 contributors
+          const v2Container = document.getElementById('v2-contributors');
+          peopleData.v2_contributors.forEach(person => {
+            v2Container.appendChild(createPersonCard(person));
+          });
+
+        } catch (error) {
+          console.error('Error loading team data:', error);
+        }
+      }
+
+      // Load team when page loads
+      document.addEventListener('DOMContentLoaded', loadTeam);
     </script>
   </body>
 </html>
