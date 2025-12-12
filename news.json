@@ -32,6 +32,6 @@
   {
     "date": "May 2020",
     "type": "paper",
-    "title": "Our paper <a href='https://ieeexplore.ieee.org/document/9238602'>SCALE-Sim v3: SCALE-Sim v3: A modular cycle-accurate systolic accelerator simulator for end-to-end system analysis</a> got accepted for ISPASS 2020."
+    "title": "Our paper <a href='https://ieeexplore.ieee.org/document/9238602'>A Systematic Methodology for Characterizing Scalability of DNN Accelerators using SCALE-Sim</a> got accepted for ISPASS 2020."
   }
 ]
