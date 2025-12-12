@@ -36,33 +36,156 @@
   <body>
     <div data-include="header.html"></div>
       <main>
-      <header>
-        <img
-          src="images/logo.png"
-          height="250px;"
-        />
+      <div class="container-fluid" style="padding: 40px 60px;">
+        <div class="row">
+          <!-- Left side: Introduction -->
+          <div class="col-md-6">
+            <div style="padding-right: 40px;">
+              <img
+                src="images/logo.png"
+                height="250px;"
+                style="margin-bottom: 20px;"
+              />
 
-        <br />
+              <br />
 
-        <p>SystoliC AcceLErator Simulator (SCALE-Sim)</p>
-        <p>SCALE-Sim is a systolic accelerator simulator, that provides cycle-accurate timing, power/energy, memory bandwidth and trace results for a specified accelerator configuration and neural network architecture.</p>
+              <h2 style="color: #333; margin-top: 20px;">SystoliC AcceLErator Simulator (SCALE-Sim)</h2>
+              <p style="font-size: 1.1rem; line-height: 1.6; color: #555;">SCALE-Sim is a systolic accelerator simulator, that provides cycle-accurate timing, power/energy, memory bandwidth and trace results for a specified accelerator configuration and neural network architecture.</p>
 
-        <a href="/gettingstarted.html"
-          ><button type="button" class="btn btn-primary" style="background-color: #0095af" href="gettingstarted.html">
-            Get Started
-          </button></a
-        >
-        <a href="https://github.com/scalesim-project/scale-sim-v2"
-          ><button type="button" class="btn btn-outline-primary">
-            Sources
-          </button></a
-        >
-        <a href="https://ieeexplore.ieee.org/abstract/document/9238602"
-          ><button type="button" class="btn btn-outline-primary">
-            Reference
-          </button></a
-        >
-      </header>
+              <div style="margin-top: 30px;">
+                <a href="/gettingstarted.html"
+                  ><button type="button" class="btn btn-primary" style="background-color: #0095af; margin-right: 10px; margin-bottom: 10px;">
+                    Get Started
+                  </button></a
+                >
+                <a href="https://github.com/scalesim-project/scale-sim-v2"
+                  ><button type="button" class="btn btn-outline-primary" style="margin-right: 10px; margin-bottom: 10px;">
+                    Sources
+                  </button></a
+                >
+                <a href="https://ieeexplore.ieee.org/abstract/document/9238602"
+                  ><button type="button" class="btn btn-outline-primary" style="margin-bottom: 10px;">
+                    Reference
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: News Section -->
+          <div class="col-md-6">
+            <div class="news-section">
+              <h3 style="color: #333; margin-bottom: 20px; font-weight: 600;">News</h3>
+              <div class="news-container" id="news-container">
+                <!-- News items will be loaded dynamically from news.json -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .news-section {
+          background: #f8f9fa;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .news-container {
+          max-height: 500px;
+          overflow-y: auto;
+          padding-right: 15px;
+        }
+
+        .news-container::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        .news-container::-webkit-scrollbar-track {
+          background: #e9ecef;
+          border-radius: 4px;
+        }
+
+        .news-container::-webkit-scrollbar-thumb {
+          background: #0095af;
+          border-radius: 4px;
+        }
+
+        .news-container::-webkit-scrollbar-thumb:hover {
+          background: #007a8f;
+        }
+
+        .news-item {
+          margin-bottom: 20px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #dee2e6;
+        }
+
+        .news-item:last-child {
+          border-bottom: none;
+        }
+
+        .news-date {
+          font-size: 0.85rem;
+          color: #6c757d;
+          margin-bottom: 8px;
+          font-weight: 500;
+        }
+
+        .news-content {
+          line-height: 1.6;
+        }
+
+        .news-badge {
+          display: inline-block;
+          padding: 3px 10px;
+          border-radius: 12px;
+          font-size: 0.75rem;
+          font-weight: 600;
+          margin-right: 8px;
+          text-transform: uppercase;
+        }
+
+        .news-badge-paper {
+          background-color: #e3d5ff;
+          color: #7c3aed;
+        }
+
+        .news-badge-talk {
+          background-color: #d1fae5;
+          color: #059669;
+        }
+
+        .news-badge-event {
+          background-color: #fef3c7;
+          color: #d97706;
+        }
+
+        .news-badge-validation {
+          background-color: #dbeafe;
+          color: #1d4ed8;
+        }
+
+        .news-badge-tutorial {
+          background-color: #fed7aa;
+          color: #c2410c;
+        }
+
+        .news-title {
+          font-size: 0.95rem;
+          color: #333;
+        }
+
+        .news-title a {
+          color: #0095af;
+          text-decoration: none;
+        }
+
+        .news-title a:hover {
+          text-decoration: underline;
+        }
+      </style>
 
       <div class="container">
         <div class="row">
@@ -178,5 +301,48 @@
     </main>
 
     <div data-include="footer.html"></div>
+
+    <script>
+      // Load news from news.json
+      async function loadNews() {
+        try {
+          const response = await fetch('news.json');
+          const newsData = await response.json();
+          const newsContainer = document.getElementById('news-container');
+
+          newsData.forEach(news => {
+            const newsItem = document.createElement('div');
+            newsItem.className = 'news-item';
+
+            const newsDate = document.createElement('div');
+            newsDate.className = 'news-date';
+            newsDate.textContent = news.date;
+
+            const newsContent = document.createElement('div');
+            newsContent.className = 'news-content';
+
+            const newsBadge = document.createElement('span');
+            newsBadge.className = `news-badge news-badge-${news.type}`;
+            newsBadge.textContent = news.type.charAt(0).toUpperCase() + news.type.slice(1);
+
+            const newsTitle = document.createElement('span');
+            newsTitle.className = 'news-title';
+            newsTitle.innerHTML = news.title;
+
+            newsContent.appendChild(newsBadge);
+            newsContent.appendChild(newsTitle);
+            newsItem.appendChild(newsDate);
+            newsItem.appendChild(newsContent);
+            newsContainer.appendChild(newsItem);
+          });
+        } catch (error) {
+          console.error('Error loading news:', error);
+          document.getElementById('news-container').innerHTML = '<p style="color: #999;">Unable to load news at this time.</p>';
+        }
+      }
+
+      // Load news when page loads
+      document.addEventListener('DOMContentLoaded', loadNews);
+    </script>
   </body>
 </html>

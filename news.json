@@ -1,0 +1,37 @@
+[
+  {
+    "date": "December 2025",
+    "type": "validation",
+    "title": "SCALE-Sim validation results against TPU v4 and v6e are now available <a href='validation.html'>here</a>."
+  },
+  {
+    "date": "May 2025",
+    "type": "talk",
+    "title": "SCALE-Sim v3 is presented at <a href='https://ispass.org/ispass2025/'>ISPASS 2025</a> in Ghent, Belgium."
+  },
+  {
+    "date": "March 2025",
+    "type": "paper",
+    "title": "Our paper <a href='https://ieeexplore.ieee.org/document/11096402'>SCALE-Sim v3: SCALE-Sim v3: A modular cycle-accurate systolic accelerator simulator for end-to-end system analysis</a> got accepted for ISPASS 2025."
+  },
+  {
+    "date": "June 2021",
+    "type": "tutorial",
+    "title": "We hosted <a href='tutorials-2021-isca.html'>SCALE-Sim tutorial</a> at ISCA 2021."
+  },
+  {
+    "date": "April 2021",
+    "type": "tutorial",
+    "title": "We hosted <a href='tutorials-2021-asplos.html'>SCALE-Sim tutorial</a> at ASPLOS 2021."
+  },
+  {
+    "date": "March 2021",
+    "type": "event",
+    "title": "SCALE-Sim codebase is open-sourced <a href='https://github.com/Scale-Sim/scalesim'>here</a>."
+  },
+  {
+    "date": "May 2020",
+    "type": "paper",
+    "title": "Our paper <a href='https://ieeexplore.ieee.org/document/9238602'>SCALE-Sim v3: SCALE-Sim v3: A modular cycle-accurate systolic accelerator simulator for end-to-end system analysis</a> got accepted for ISPASS 2020."
+  }
+]
