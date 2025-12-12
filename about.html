@@ -65,9 +65,23 @@
         <br />
         <div>
 
-          <zero-md src="https://raw.githubusercontent.com/scalesim-project/SCALE-Sim/main/README.md"></zero-md>
+          <zero-md id="readme-viewer" src="https://raw.githubusercontent.com/scalesim-project/SCALE-Sim/main/README.md"></zero-md>
 
          </div>
+      <script>
+        // Fix GitHub blob URLs to raw URLs for images
+        document.addEventListener('DOMContentLoaded', function() {
+          const zeroMd = document.getElementById('readme-viewer');
+          zeroMd.addEventListener('zero-md-rendered', function() {
+            const images = zeroMd.shadowRoot.querySelectorAll('img');
+            images.forEach(img => {
+              if (img.src.includes('github.com') && img.src.includes('/blob/')) {
+                img.src = img.src.replace('/blob/', '/raw/');
+              }
+            });
+          });
+        });
+      </script>
       </div>
 
       <!-- button to scroll to top of page -->
