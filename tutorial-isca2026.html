@@ -1,0 +1,463 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="csi.min.js"></script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SCALE-Sim: ISCA 2026 Tutorial</title>
+
+    <!-- SITE FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <style>
+      .tutorial-header {
+        background: linear-gradient(135deg, #0095af11 0%, #F0A21611 100%);
+        border-left: 5px solid #0095af;
+        padding: 25px 30px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+      }
+
+      .tutorial-header h1 {
+        font-size: 1.6rem;
+        color: #1a1a1a;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+
+      .tutorial-meta {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      .tutorial-meta span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .tutorial-meta i {
+        color: #0095af;
+      }
+
+      .section-heading {
+        color: #1a1a1a;
+        font-weight: 700;
+        border-bottom: 3px solid #F0A216;
+        padding-bottom: 8px;
+        margin: 40px 0 20px 0;
+      }
+
+      .abstract-box {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 25px 30px;
+        line-height: 1.8;
+        color: #444;
+        font-size: 0.97rem;
+      }
+
+      .feature-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 20px 25px;
+        margin-bottom: 20px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+
+      .feature-block h4 {
+        color: #0095af;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .feature-list li {
+        padding: 5px 0;
+        padding-left: 20px;
+        position: relative;
+        color: #444;
+        font-size: 0.95rem;
+      }
+
+      .feature-list li::before {
+        content: "›";
+        position: absolute;
+        left: 0;
+        color: #F0A216;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .topics-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .topics-list > li {
+        padding: 6px 0 6px 20px;
+        position: relative;
+        font-weight: 600;
+        color: #333;
+        font-size: 0.97rem;
+      }
+
+      .topics-list > li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #0095af;
+        font-weight: 700;
+      }
+
+      .topics-list ul {
+        margin-top: 5px;
+        padding-left: 20px;
+        list-style: none;
+      }
+
+      .topics-list ul li {
+        padding: 3px 0 3px 20px;
+        position: relative;
+        font-weight: 400;
+        color: #555;
+        font-size: 0.92rem;
+      }
+
+      .topics-list ul li::before {
+        content: "›";
+        position: absolute;
+        left: 0;
+        color: #F0A216;
+        font-weight: 700;
+      }
+
+      .topics-list ul ul li::before {
+        content: "–";
+        color: #aaa;
+      }
+
+      .organizer-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 22px 25px;
+        margin-bottom: 20px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+
+      .organizer-card .org-name {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #0095af;
+        margin-bottom: 4px;
+      }
+
+      .organizer-card .org-title {
+        font-size: 0.88rem;
+        color: #888;
+        margin-bottom: 12px;
+      }
+
+      .organizer-card p {
+        font-size: 0.93rem;
+        color: #444;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .prior-offering {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .prior-offering .conf-name {
+        font-weight: 600;
+        color: #333;
+      }
+
+      .prior-offering .conf-meta {
+        font-size: 0.88rem;
+        color: #666;
+      }
+
+      .tag-badge {
+        display: inline-block;
+        padding: 3px 12px;
+        border-radius: 12px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        background: #0095af22;
+        color: #0095af;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-include="header.html"></div>
+    <main>
+      <br /><br />
+      <div class="container">
+
+        <!-- Header -->
+        <div class="tutorial-header">
+          <div style="margin-bottom: 8px;">
+            <span class="tag-badge">Tutorial Proposal</span>
+            <span class="tag-badge" style="background:#F0A21622; color:#c47f00;">ISCA 2026</span>
+          </div>
+          <h1>SCALE-Sim Across the Silicon Lifecycle:<br>
+            Pre-Silicon Cycle-Accurate Simulation for Next-Gen AI Accelerators (SCALE-Sim v3)
+            and Post-Silicon Evaluation on State-of-the-art AI Accelerators (SCALE-Sim TPU)
+          </h1>
+          <div class="tutorial-meta">
+            <span><i class="fas fa-calendar-alt"></i> ISCA 2026</span>
+            <span><i class="fas fa-clock"></i> Half-Day</span>
+            <span><i class="fas fa-users"></i> Expected: 50–100 participants</span>
+          </div>
+        </div>
+
+        <!-- Abstract -->
+        <h2 class="section-heading">Abstract</h2>
+        <div class="abstract-box">
+          <p>Modern design and simulation methodologies have led to design tools being increasingly used in the AI landscape — enabling rapid design-space exploration (DSE) and performance/power analysis to meet the demands of modern AI workloads. In this landscape, SCALE-Sim helps in designing next-gen AI accelerators through pre-silicon cycle-accurate full-system simulation and choosing AI models through post-silicon evaluation on state-of-the-art (SOTA) AI accelerators.</p>
+          <p style="margin-top: 15px; margin-bottom: 0;">SCALE-Sim is widely used in industry including <strong>Arm</strong> and <strong>IMEC</strong> as well as academia, including <strong>Stanford University</strong>, with more than <strong>500 GitHub stars</strong>. In this tutorial, we will present two major updates to the SCALE-Sim infrastructure.</p>
+        </div>
+
+        <!-- Two main parts -->
+        <h2 class="section-heading">Tutorial Overview</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="feature-block">
+              <h4><i class="fas fa-microchip" style="margin-right: 8px;"></i>SCALE-Sim v3: Pre-Silicon</h4>
+              <p style="font-size: 0.93rem; color: #555; margin-bottom: 15px;">A modular, cycle-accurate simulator that extends v2 with five significant enhancements:</p>
+              <ul class="feature-list">
+                <li>Multi-core simulation with spatio-temporal partitioning</li>
+                <li>Support for sparse matrix multiplications (SpMM) with layer-wise and row-wise sparsity</li>
+                <li>Integration with Ramulator for detailed DRAM analysis</li>
+                <li>Precise on-chip data layout modeling</li>
+                <li>Energy and power estimation via Accelergy</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-block">
+              <h4><i class="fas fa-clipboard-check" style="margin-right: 8px;"></i>SCALE-Sim TPU: Post-Silicon</h4>
+              <p style="font-size: 0.93rem; color: #555; margin-bottom: 15px;">Validated against measured on-device runtimes on Google TPU v4 and TPU v6e:</p>
+              <ul class="feature-list">
+                <li>Regression analysis across multiple matrix-size regimes (&lt;128, 128–1024, 1024–4096)</li>
+                <li>Achieves up to <strong>R² = 0.99</strong> against measured TPU fusion-kernel runtimes</li>
+                <li>Supports Weight-Stationary (WS) and Input-Stationary (IS) dataflow modes</li>
+                <li>Reliable cycle-level performance estimates for GEMM workloads on TPU-class architectures</li>
+                <li>Timely resource for studying deployment on upcoming Google TPUv7 (Ironwood)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topics -->
+        <h2 class="section-heading">Topics to be Covered</h2>
+        <ul class="topics-list">
+          <li>Introduction to AI accelerators
+            <ul>
+              <li>Hardware Units: MatMul, Vector/SIMD</li>
+              <li>Software Stack: Operators</li>
+            </ul>
+          </li>
+          <li>Overview of SCALE-Sim
+            <ul>
+              <li>Front-end
+                <ul>
+                  <li>Input: Model topology and hardware configurations</li>
+                </ul>
+              </li>
+              <li>Compute and Memory Model
+                <ul>
+                  <li>Input, output and weight stationary compute models</li>
+                  <li>Cycle-accurate SRAM and DRAM memory tracing</li>
+                </ul>
+              </li>
+              <li>v3 Features
+                <ul>
+                  <li>N:M sparsity, Ramulator integration, Accelergy integration, SRAM data layout, multi-core</li>
+                </ul>
+              </li>
+              <li>SCALE-Sim TPU</li>
+            </ul>
+          </li>
+          <li>Demo of SCALE-Sim via Case Studies
+            <ul>
+              <li>Understanding Dataflow-EDP Pareto-frontier using SCALE-Sim v3</li>
+              <li>Deep-dive into on-chip and off-chip memory stalls for sparse cores using SCALE-Sim v3</li>
+              <li>Evaluating emerging workloads using SCALE-Sim TPU</li>
+            </ul>
+          </li>
+          <li>Extensions and Future Development
+            <ul>
+              <li>StableHLO integration</li>
+              <li>Event-driven simulation</li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Prior Offerings -->
+        <h2 class="section-heading">Prior Offerings</h2>
+        <p style="color: #555; margin-bottom: 20px;">This is the first iteration of the SCALE-Sim tutorial presenting SCALE-Sim v3 and SCALE-Sim TPU. Previous iterations using v2 of the simulator:</p>
+        <div class="prior-offering">
+          <div>
+            <span class="conf-name">ASPLOS 2021</span>
+            <span style="color: #aaa; margin: 0 8px;">—</span>
+            <span class="conf-meta">Half-Day Tutorial &nbsp;·&nbsp; April 16, 2021</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <span class="conf-meta"><i class="fas fa-user-friends" style="margin-right: 5px;"></i>~50 participants</span>
+            <a href="https://scalesim-project.github.io/tutorials-2021-asplos.html" class="btn btn-sm btn-outline-primary">View Tutorial</a>
+          </div>
+        </div>
+        <div class="prior-offering">
+          <div>
+            <span class="conf-name">ISCA 2021</span>
+            <span style="color: #aaa; margin: 0 8px;">—</span>
+            <span class="conf-meta">Half-Day Tutorial &nbsp;·&nbsp; June 19, 2021</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <span class="conf-meta"><i class="fas fa-user-friends" style="margin-right: 5px;"></i>~50 participants</span>
+            <a href="https://scalesim-project.github.io/tutorials-2021-isca.html" class="btn btn-sm btn-outline-primary">View Tutorial</a>
+          </div>
+        </div>
+
+        <!-- Organizers -->
+        <h2 class="section-heading">Organizers</h2>
+        <div class="organizer-card">
+          <div class="org-name">Dr. Tushar Krishna</div>
+          <div class="org-title">Associate Professor, School of ECE, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:tushar@ece.gatech.edu">tushar@ece.gatech.edu</a></div>
+          <p>Dr. Krishna has a Ph.D. in EECS from MIT (2014), M.S.E in EE from Princeton (2009), and B.Tech in EE from IIT Delhi (2007). His research spans computer architecture, interconnection networks, NoC, and AI accelerator systems, funded by NSF, DARPA, IARPA, SRC (JUMP2.0), DoE, Intel, Google, Meta, Qualcomm and TSMC. His papers have been cited over 21,000 times. He is part of the Halls of Fame of MICRO, HPCA and ISCA, and was recipient of the "Under 40 Innovators Award" at DAC 2025.</p>
+        </div>
+        <div class="organizer-card">
+          <div class="org-name">Dr. Sarbartha Banerjee</div>
+          <div class="org-title">Postdoctoral Fellow, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:sbanerjee76@gatech.edu">sbanerjee76@gatech.edu</a></div>
+          <p>Dr. Banerjee received his PhD from UT Austin in 2024, MS from UT Austin in 2018 and B.Tech in EE from IIT Kharagpur in 2012. His research focuses on leveraging workload characteristics to optimize LLM inference infrastructure while ensuring security guarantees. Currently working on frameworks for cross-stack attack chains targeting Compound AI systems and efficient disaggregated hardware architectures for LLM training and inference.</p>
+        </div>
+        <div class="organizer-card">
+          <div class="org-name">Ritik Raj</div>
+          <div class="org-title">Ph.D. Student, ECE, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:ritik.raj@gatech.edu">ritik.raj@gatech.edu</a></div>
+          <p>Third-year ECE Ph.D. student at Georgia Tech advised by Dr. Tushar Krishna. B.Tech in ECE from IIT Roorkee (2023). Recipient of the IBM PhD Fellowship in 2026. His research interests broadly include hardware-software co-design, architecture simulation and exploration for next-gen AI workloads.</p>
+        </div>
+        <div class="organizer-card">
+          <div class="org-name">Jingtian Dang</div>
+          <div class="org-title">Ph.D. Student, ECE, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:dangjingtian@gatech.edu">dangjingtian@gatech.edu</a></div>
+          <p>Second-year Ph.D. student in ECE at Georgia Tech, advised by Tushar Krishna. His research focuses on hardware–software co-design and architecture simulation for AI accelerators, with an emphasis on accelerating cryptographic workloads such as FHE and ZKP on systolic-array-based accelerators. Actively involved in TPU validation for SCALE-Sim.</p>
+        </div>
+
+        <!-- Invited Presenters -->
+        <h2 class="section-heading">Invited Presenters</h2>
+        <div class="organizer-card">
+          <div class="org-name">Dr. Suvinay Subramanian</div>
+          <div class="org-title">Computer Architect, Google &nbsp;·&nbsp; <a href="mailto:suvinay@google.com">suvinay@google.com</a></div>
+          <p>Before joining Google, Dr. Subramanian received his PhD from MIT in 2018. He works on building hardware systems (TPUs) to accelerate machine learning and AI, with expertise in hardware-software codesign spanning circuits, microarchitecture, architecture, programming models, and interconnection networks. <em>Dr. Subramanian will be giving a Keynote talk at the Tutorial on the Google TPU.</em></p>
+        </div>
+        <div class="organizer-card">
+          <div class="org-name">Dr. Ananda Samajdar</div>
+          <div class="org-title">Research Staff Member, IBM T.J. Watson Research Center &nbsp;·&nbsp; <a href="mailto:ananda.samajdar@ibm.com">ananda.samajdar@ibm.com</a></div>
+          <p>Dr. Samajdar joined IBM in 2022 after obtaining his PhD from Georgia Institute of Technology. He is currently exploring accelerator design and compilation/mapping strategies for AI workloads on IBM's RaPiD AI accelerator. During his Ph.D., he developed the first two versions of SCALE-Sim.</p>
+        </div>
+
+        <!-- Resources -->
+        <h2 class="section-heading">Resources</h2>
+        <div style="background: #f8f9fa; border-radius: 8px; padding: 25px 30px;">
+          <p style="margin-bottom: 15px; font-weight: 600; color: #333;">Papers</p>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 10px 0; border-bottom: 1px solid #e9ecef; font-size: 0.93rem; color: #444; line-height: 1.6;">
+              R. Raj, S. Banerjee, N. Chandra, Z. Wan, J. Tong, A. Samajdar, and T. Krishna. "SCALE-Sim v3: A modular cycle-accurate systolic accelerator simulator for end-to-end system analysis." <em>In 2025 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)</em>, pp. 186–200. IEEE, 2025.
+            </li>
+            <li style="padding: 10px 0; font-size: 0.93rem; color: #444; line-height: 1.6;">
+              A. Samajdar, J.M. Joseph, Y. Zhu, P. Whatmough, M. Mattina, T. Krishna. "A systematic methodology for characterizing scalability of DNN accelerators using SCALE-Sim." <em>In 2020 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)</em>, pp. 58–68. IEEE, 2020.
+            </li>
+          </ul>
+          <p style="margin: 20px 0 15px; font-weight: 600; color: #333;">Source Code</p>
+          <a href="https://github.com/scalesim-project/SCALE-Sim" class="btn btn-primary" style="background-color: #0095af; border-color: #0095af;">
+            <i class="fas fa-code-branch" style="margin-right: 8px;"></i>View on GitHub
+          </a>
+        </div>
+
+        <br /><br />
+      </div>
+
+      <!-- button to scroll to top of page -->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">△</button>
+    </main>
+    <div data-include="footer.html"></div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      window.onscroll = function () { scrollFunction(); };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+        } else {
+          document.getElementById("myBtn").style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
