@@ -188,14 +188,7 @@
       .organizer-card .org-title {
         font-size: 0.88rem;
         color: #888;
-        margin-bottom: 12px;
-      }
-
-      .organizer-card p {
-        font-size: 0.93rem;
-        color: #444;
-        line-height: 1.7;
-        margin: 0;
+        margin-bottom: 0;
       }
 
       .prior-offering {
@@ -250,9 +243,8 @@
             and Post-Silicon Evaluation on State-of-the-art AI Accelerators (SCALE-Sim TPU)
           </h1>
           <div class="tutorial-meta">
-            <span><i class="fas fa-calendar-alt"></i> ISCA 2026</span>
-            <span><i class="fas fa-clock"></i> Half-Day</span>
-            <span><i class="fas fa-users"></i> Expected: 50–100 participants</span>
+            <span><i class="fas fa-calendar-alt"></i> 28 June 2026, Sunday</span>
+            <span><i class="fas fa-clock"></i> Afternoon Session &nbsp;·&nbsp; Half-Day</span>
           </div>
         </div>
 
@@ -265,6 +257,14 @@
 
         <!-- Two main parts -->
         <h2 class="section-heading">Tutorial Overview</h2>
+
+        <div style="text-align: center; margin-bottom: 30px;">
+          <figure style="display: inline-block; margin: 0;">
+            <img src="Downloads/krittika.pdf" alt="SCALE-Sim v3 Overview" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <figcaption style="margin-top: 10px; font-size: 0.88rem; color: #666; font-style: italic;">Figure: Overview of SCALE-Sim v3 highlighting the new features over SCALE-Sim v2</figcaption>
+          </figure>
+        </div>
+
         <div class="row">
           <div class="col-md-6">
             <div class="feature-block">
@@ -294,75 +294,27 @@
           </div>
         </div>
 
-        <!-- Topics -->
-        <h2 class="section-heading">Topics to be Covered</h2>
-        <ul class="topics-list">
-          <li>Introduction to AI accelerators
-            <ul>
-              <li>Hardware Units: MatMul, Vector/SIMD</li>
-              <li>Software Stack: Operators</li>
-            </ul>
-          </li>
-          <li>Overview of SCALE-Sim
-            <ul>
-              <li>Front-end
-                <ul>
-                  <li>Input: Model topology and hardware configurations</li>
-                </ul>
-              </li>
-              <li>Compute and Memory Model
-                <ul>
-                  <li>Input, output and weight stationary compute models</li>
-                  <li>Cycle-accurate SRAM and DRAM memory tracing</li>
-                </ul>
-              </li>
-              <li>v3 Features
-                <ul>
-                  <li>N:M sparsity, Ramulator integration, Accelergy integration, SRAM data layout, multi-core</li>
-                </ul>
-              </li>
-              <li>SCALE-Sim TPU</li>
-            </ul>
-          </li>
-          <li>Demo of SCALE-Sim via Case Studies
-            <ul>
-              <li>Understanding Dataflow-EDP Pareto-frontier using SCALE-Sim v3</li>
-              <li>Deep-dive into on-chip and off-chip memory stalls for sparse cores using SCALE-Sim v3</li>
-              <li>Evaluating emerging workloads using SCALE-Sim TPU</li>
-            </ul>
-          </li>
-          <li>Extensions and Future Development
-            <ul>
-              <li>StableHLO integration</li>
-              <li>Event-driven simulation</li>
-            </ul>
-          </li>
-        </ul>
+        <div style="text-align: center; margin-bottom: 10px;">
+          <figure style="display: inline-block; margin: 0;">
+            <img src="Downloads/Figures-Page-10.drawio.png" alt="SCALE-Sim TPU Validation Overview" style="max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <figcaption style="margin-top: 10px; font-size: 0.88rem; color: #666; font-style: italic;">Figure: SCALE-Sim TPU post-silicon evaluation on Google TPU v4 and TPU v6e</figcaption>
+          </figure>
+        </div>
+
+        <!-- Schedule -->
+        <h2 class="section-heading">Schedule</h2>
+        <p style="color: #888; font-style: italic;">To be Updated</p>
 
         <!-- Prior Offerings -->
         <h2 class="section-heading">Prior Offerings</h2>
         <p style="color: #555; margin-bottom: 20px;">This is the first iteration of the SCALE-Sim tutorial presenting SCALE-Sim v3 and SCALE-Sim TPU. Previous iterations using v2 of the simulator:</p>
         <div class="prior-offering">
-          <div>
-            <span class="conf-name">ASPLOS 2021</span>
-            <span style="color: #aaa; margin: 0 8px;">—</span>
-            <span class="conf-meta">Half-Day Tutorial &nbsp;·&nbsp; April 16, 2021</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <span class="conf-meta"><i class="fas fa-user-friends" style="margin-right: 5px;"></i>~50 participants</span>
-            <a href="https://scalesim-project.github.io/tutorials-2021-asplos.html" class="btn btn-sm btn-outline-primary">View Tutorial</a>
-          </div>
+          <span class="conf-name">ASPLOS 2021</span>
+          <a href="https://scalesim-project.github.io/tutorials-2021-asplos.html" class="btn btn-sm btn-outline-primary">View Tutorial</a>
         </div>
         <div class="prior-offering">
-          <div>
-            <span class="conf-name">ISCA 2021</span>
-            <span style="color: #aaa; margin: 0 8px;">—</span>
-            <span class="conf-meta">Half-Day Tutorial &nbsp;·&nbsp; June 19, 2021</span>
-          </div>
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <span class="conf-meta"><i class="fas fa-user-friends" style="margin-right: 5px;"></i>~50 participants</span>
-            <a href="https://scalesim-project.github.io/tutorials-2021-isca.html" class="btn btn-sm btn-outline-primary">View Tutorial</a>
-          </div>
+          <span class="conf-name">ISCA 2021</span>
+          <a href="https://scalesim-project.github.io/tutorials-2021-isca.html" class="btn btn-sm btn-outline-primary">View Tutorial</a>
         </div>
 
         <!-- Organizers -->
@@ -370,22 +322,18 @@
         <div class="organizer-card">
           <div class="org-name">Dr. Tushar Krishna</div>
           <div class="org-title">Associate Professor, School of ECE, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:tushar@ece.gatech.edu">tushar@ece.gatech.edu</a></div>
-          <p>Dr. Krishna has a Ph.D. in EECS from MIT (2014), M.S.E in EE from Princeton (2009), and B.Tech in EE from IIT Delhi (2007). His research spans computer architecture, interconnection networks, NoC, and AI accelerator systems, funded by NSF, DARPA, IARPA, SRC (JUMP2.0), DoE, Intel, Google, Meta, Qualcomm and TSMC. His papers have been cited over 21,000 times. He is part of the Halls of Fame of MICRO, HPCA and ISCA, and was recipient of the "Under 40 Innovators Award" at DAC 2025.</p>
-        </div>
-        <div class="organizer-card">
-          <div class="org-name">Dr. Sarbartha Banerjee</div>
-          <div class="org-title">Postdoctoral Fellow, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:sbanerjee76@gatech.edu">sbanerjee76@gatech.edu</a></div>
-          <p>Dr. Banerjee received his PhD from UT Austin in 2024, MS from UT Austin in 2018 and B.Tech in EE from IIT Kharagpur in 2012. His research focuses on leveraging workload characteristics to optimize LLM inference infrastructure while ensuring security guarantees. Currently working on frameworks for cross-stack attack chains targeting Compound AI systems and efficient disaggregated hardware architectures for LLM training and inference.</p>
         </div>
         <div class="organizer-card">
           <div class="org-name">Ritik Raj</div>
           <div class="org-title">Ph.D. Student, ECE, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:ritik.raj@gatech.edu">ritik.raj@gatech.edu</a></div>
-          <p>Third-year ECE Ph.D. student at Georgia Tech advised by Dr. Tushar Krishna. B.Tech in ECE from IIT Roorkee (2023). Recipient of the IBM PhD Fellowship in 2026. His research interests broadly include hardware-software co-design, architecture simulation and exploration for next-gen AI workloads.</p>
         </div>
         <div class="organizer-card">
           <div class="org-name">Jingtian Dang</div>
           <div class="org-title">Ph.D. Student, ECE, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:dangjingtian@gatech.edu">dangjingtian@gatech.edu</a></div>
-          <p>Second-year Ph.D. student in ECE at Georgia Tech, advised by Tushar Krishna. His research focuses on hardware–software co-design and architecture simulation for AI accelerators, with an emphasis on accelerating cryptographic workloads such as FHE and ZKP on systolic-array-based accelerators. Actively involved in TPU validation for SCALE-Sim.</p>
+        </div>
+        <div class="organizer-card">
+          <div class="org-name">Dr. Sarbartha Banerjee</div>
+          <div class="org-title">Postdoctoral Fellow, Georgia Institute of Technology &nbsp;·&nbsp; <a href="mailto:sbanerjee76@gatech.edu">sbanerjee76@gatech.edu</a></div>
         </div>
 
         <!-- Invited Presenters -->
@@ -393,12 +341,10 @@
         <div class="organizer-card">
           <div class="org-name">Dr. Suvinay Subramanian</div>
           <div class="org-title">Computer Architect, Google &nbsp;·&nbsp; <a href="mailto:suvinay@google.com">suvinay@google.com</a></div>
-          <p>Before joining Google, Dr. Subramanian received his PhD from MIT in 2018. He works on building hardware systems (TPUs) to accelerate machine learning and AI, with expertise in hardware-software codesign spanning circuits, microarchitecture, architecture, programming models, and interconnection networks. <em>Dr. Subramanian will be giving a Keynote talk at the Tutorial on the Google TPU.</em></p>
         </div>
         <div class="organizer-card">
           <div class="org-name">Dr. Ananda Samajdar</div>
           <div class="org-title">Research Staff Member, IBM T.J. Watson Research Center &nbsp;·&nbsp; <a href="mailto:ananda.samajdar@ibm.com">ananda.samajdar@ibm.com</a></div>
-          <p>Dr. Samajdar joined IBM in 2022 after obtaining his PhD from Georgia Institute of Technology. He is currently exploring accelerator design and compilation/mapping strategies for AI workloads on IBM's RaPiD AI accelerator. During his Ph.D., he developed the first two versions of SCALE-Sim.</p>
         </div>
 
         <!-- Resources -->
@@ -406,6 +352,9 @@
         <div style="background: #f8f9fa; border-radius: 8px; padding: 25px 30px;">
           <p style="margin-bottom: 15px; font-weight: 600; color: #333;">Papers</p>
           <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 10px 0; border-bottom: 1px solid #e9ecef; font-size: 0.93rem; color: #444; line-height: 1.6;">
+              J. Dang, R. Raj, C. Man, J. Tong, and T. Krishna. "SCALE-Sim TPU: Validating and Extending SCALE-Sim for TPUs." <em>arXiv preprint arXiv:2603.22535</em>, 2026.
+            </li>
             <li style="padding: 10px 0; border-bottom: 1px solid #e9ecef; font-size: 0.93rem; color: #444; line-height: 1.6;">
               R. Raj, S. Banerjee, N. Chandra, Z. Wan, J. Tong, A. Samajdar, and T. Krishna. "SCALE-Sim v3: A modular cycle-accurate systolic accelerator simulator for end-to-end system analysis." <em>In 2025 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)</em>, pp. 186–200. IEEE, 2025.
             </li>
