@@ -238,20 +238,21 @@
             <span class="tag-badge">Tutorial Proposal</span>
             <span class="tag-badge" style="background:#F0A21622; color:#c47f00;">ISCA 2026</span>
           </div>
-          <h1>SCALE-Sim Across the Silicon Lifecycle:<br>
-            Pre-Silicon Cycle-Accurate Simulation for Next-Gen AI Accelerators (SCALE-Sim v3)
-            and Post-Silicon Evaluation on State-of-the-art AI Accelerators (SCALE-Sim TPU)
-          </h1>
+          <h1>SCALE-Sim Across the Silicon Lifecycle:<br></h1>
+            <h5>&#9670 [SCALE-Sim V3] &ensp; Pre-Silicon Cycle-Accurate Simulation for Next-Gen AI Accelerators <br>
+            &#9670 [SCALE-Sim TPU] Post-Silicon Evaluation on State-of-the-art AI Accelerators 
+            </h5>
           <div class="tutorial-meta">
             <span><i class="fas fa-calendar-alt"></i> 28 June 2026, Sunday</span>
             <span><i class="fas fa-clock"></i> Afternoon Session &nbsp;·&nbsp; Half-Day</span>
+            <span><i class="fas fa-map-marker-alt"></i> Room 305A, Raleigh Convention Center, Raleigh, NC </span>
           </div>
         </div>
 
         <!-- Abstract -->
         <h2 class="section-heading">Abstract</h2>
         <div class="abstract-box">
-          <p>Modern design and simulation methodologies have led to design tools being increasingly used in the AI landscape — enabling rapid design-space exploration (DSE) and performance/power analysis to meet the demands of modern AI workloads. In this landscape, SCALE-Sim helps in designing next-gen AI accelerators through pre-silicon cycle-accurate full-system simulation and choosing AI models through post-silicon evaluation on state-of-the-art (SOTA) AI accelerators.</p>
+          <p>Modern design and simulation methodologies have led to design tools being increasingly used in the AI landscape — enabling rapid <strong> design-space exploration (DSE)</strong> and <strong>  performance/power analysis</strong> to meet the demands of modern AI workloads. In this landscape, SCALE-Sim helps in designing next-gen AI accelerators through <strong>pre-silicon</strong> cycle-accurate full-system simulation and choosing AI models through<strong> post-silicon</strong> evaluation on state-of-the-art (SOTA) AI accelerators.</p>
           <p style="margin-top: 15px; margin-bottom: 0;">SCALE-Sim is widely used in industry including <strong>Arm</strong> and <strong>IMEC</strong> as well as academia, including <strong>Stanford University</strong>, with more than <strong>500 GitHub stars</strong>. In this tutorial, we will present two major updates to the SCALE-Sim infrastructure.</p>
         </div>
 
@@ -276,27 +277,27 @@
         <div class="row">
           <div class="col-md-6">
             <div class="feature-block">
-              <h4><i class="fas fa-microchip" style="margin-right: 8px;"></i>SCALE-Sim v3: Pre-Silicon</h4>
+              <h4><i class="fas fa-microchip" style="margin-right: 8px;"></i><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11096402">SCALE-Sim v3: Pre-Silicon</a></h4>
               <p style="font-size: 0.93rem; color: #555; margin-bottom: 15px;">A modular, cycle-accurate simulator that extends v2 with five significant enhancements:</p>
               <ul class="feature-list">
-                <li>Multi-core simulation with spatio-temporal partitioning</li>
-                <li>Support for sparse matrix multiplications (SpMM) with layer-wise and row-wise sparsity</li>
-                <li>Integration with Ramulator for detailed DRAM analysis</li>
-                <li>Precise on-chip data layout modeling</li>
-                <li>Energy and power estimation via Accelergy</li>
+                <li>Multi-Core Simulation with Spatio-Temporal Partitioning</li>
+                <li>Sparse Matrix Multiplications (SpMM) with Layer- and Row-wise Sparsity</li>
+                <li><a href="https://github.com/CMU-SAFARI/ramulator">Ramulator</a> Integration for Detailed DRAM Analysis</li>
+                <li>Precise Modeling of On-Chip Data Layout</li>
+                <li>Energy and Power estimation with <a href="https://github.com/Accelergy-Project/accelergy">Accelergy</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6">
             <div class="feature-block">
-              <h4><i class="fas fa-clipboard-check" style="margin-right: 8px;"></i>SCALE-Sim TPU: Post-Silicon</h4>
-              <p style="font-size: 0.93rem; color: #555; margin-bottom: 15px;">Validated against measured on-device runtimes on Google TPU v4 and TPU v6e:</p>
+              <h4><i class="fas fa-clipboard-check" style="margin-right: 8px;"></i><a href="https://arxiv.org/pdf/2603.22535">SCALE-Sim TPU: Post-Silicon</a></h4>
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">Validated against measured on-device runtimes on Google TPU v4 and TPU v6e:</p>
               <ul class="feature-list">
-                <li>Regression analysis across multiple matrix-size regimes (&lt;128, 128–1024, 1024–4096)</li>
-                <li>Achieves up to <strong>R² = 0.99</strong> against measured TPU fusion-kernel runtimes</li>
-                <li>Supports Weight-Stationary (WS) and Input-Stationary (IS) dataflow modes</li>
-                <li>Reliable cycle-level performance estimates for GEMM workloads on TPU-class architectures</li>
-                <li>Timely resource for studying deployment on upcoming Google TPUv7 (Ironwood)</li>
+                <li>Regression analysis across diverse matrix sizes</li>
+                <li>Up to <strong>R² = 0.99</strong> vs. measured TPU fusion-kernel runtimes</li>
+                <li>Supports Weight-Stationary (WS) and Input-Stationary (IS) dataflows</li>
+                <li>Cycle-level GEMM performance estimation for TPU-class architectures</li>
+                <li>Enables deployment studies for upcoming TPUv7 (Ironwood) systems</li>
               </ul>
             </div>
           </div>
@@ -320,25 +321,25 @@
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #555;">1:30 – 1:35</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; font-weight: 600;">Introduction</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee;">Dr. Tushar Krishna</td>
-                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;"></td>
+                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;"> Introduce the vision behind the development of SCALE-Sim</td>
               </tr>
               <tr style="background: #f8f9fa;">
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #555;">1:35 – 2:15</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; font-weight: 600;">Keynote Talk</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee;">Dr. Suvinay Subramanian</td>
-                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;">Google TPUs</td>
+                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;">Keynote on Google TPUs</td>
               </tr>
               <tr style="background: #fff;">
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #555;">2:15 – 2:30</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; font-weight: 600;">SCALE-Sim Talk</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee;">Dr. Ananda Samajdar</td>
-                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;">Introduce SCALE-Sim (v2)</td>
+                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;">Describe the contributions and impact of SCALE-Sim V2</td>
               </tr>
               <tr style="background: #f8f9fa;">
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #555;">2:30 – 2:40</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; font-weight: 600;">Overview of SCALE-Sim v3</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee;">Ritik Raj</td>
-                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;">v3 Features</td>
+                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;">Overview of new features added to SCALE-Sim v3</td>
               </tr>
               <tr style="background: #fff;">
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #555;">2:40 – 3:00</td>
@@ -362,7 +363,7 @@
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #555;">4:00 – 4:15</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; font-weight: 600;">Intro to SCALE-Sim TPU</td>
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee;">Jingtian Dang</td>
-                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;"></td>
+                <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #666;">Post-silicon validation of SCALE-Sim to TPU-class architectures</td>
               </tr>
               <tr style="background: #f8f9fa;">
                 <td style="padding: 11px 16px; border-bottom: 1px solid #eee; color: #555;">4:15 – 4:40</td>
@@ -380,7 +381,7 @@
                 <td style="padding: 11px 16px; color: #555;">4:50 – 4:55</td>
                 <td style="padding: 11px 16px; font-weight: 600;">Signing Off / Final Thoughts</td>
                 <td style="padding: 11px 16px;">Dr. Tushar Krishna</td>
-                <td style="padding: 11px 16px; color: #666;"></td>
+                <td style="padding: 11px 16px; color: #666;">Open session with audience with future collaboration opportunities</td>
               </tr>
             </tbody>
           </table>
