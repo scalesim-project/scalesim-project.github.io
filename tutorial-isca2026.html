@@ -176,26 +176,58 @@
         color: #aaa;
       }
 
-      .organizer-card {
-        border: 1px solid #e0e0e0;
-        border-radius: 10px;
-        padding: 22px 25px;
-        margin-bottom: 20px;
-        background: #fff;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      .organizer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 20px;
+        margin-bottom: 24px;
       }
+
+      .organizer-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+        border: 1px solid #e9ecef;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      }
+
+      .org-photo {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        display: block;
+      }
+
+      .org-info { width: 100%; }
 
       .organizer-card .org-name {
         font-size: 1.05rem;
         font-weight: 700;
-        color: #0095af;
-        margin-bottom: 4px;
+        color: #222;
+        margin-bottom: 6px;
       }
 
+      .organizer-card .org-name a { color: inherit; text-decoration: none; }
+
       .organizer-card .org-title {
-        font-size: 0.88rem;
-        color: #888;
-        margin-bottom: 0;
+        font-size: 0.92rem;
+        color: #666;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+
+      .org-links { display: flex; justify-content: center; gap: 10px; }
+      .org-links a { color: #0095af; font-size: 1.05rem; }
+
+      @media (max-width: 768px) {
+        .org-photo { width: 120px; height: 120px; }
       }
 
       .prior-offering {
@@ -230,6 +262,47 @@
         color: #0095af;
         margin-right: 8px;
       }
+
+      /* Image layout improvements */
+      figure img { max-width: 100%; height: auto; display: block; }
+
+      .hero-figure { margin: 0; width: 100%; }
+      .hero-img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .hero-img { height: 160px; }
+      }
+
+      /* Organizer grid and uniform photos */
+      .organizer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-bottom: 10px;
+      }
+
+      .organizer-card {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .org-photo {
+        width: 72px;
+        height: 72px;
+        object-fit: cover;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .organizer-card > div { min-width: 0; }
     </style>
   </head>
 
@@ -268,14 +341,14 @@
 
         <div class="row mb-4">
           <div class="col-md-6 d-flex flex-column align-items-center">
-            <figure style="margin: 0; width: 100%;">
-              <img src="images/krittika.png" alt="SCALE-Sim v3 Overview" style="width: 100%; height: 220px; object-fit: contain; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <figure class="hero-figure" style="margin: 0; width: 100%;">
+                <img src="images/krittika.png" alt="SCALE-Sim v3 Overview" class="hero-img">
               <figcaption style="margin-top: 8px; font-size: 0.85rem; color: #666; font-style: italic; text-align: center;">Figure: Overview of SCALE-Sim v3 highlighting the new features over SCALE-Sim v2</figcaption>
             </figure>
           </div>
           <div class="col-md-6 d-flex flex-column align-items-center">
-            <figure style="margin: 0; width: 100%;">
-              <img src="images/Figures-Page-10.drawio.png" alt="SCALE-Sim TPU Validation Overview" style="width: 100%; height: 220px; object-fit: contain; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <figure class="hero-figure" style="margin: 0; width: 100%;">
+                <img src="images/Figures-Page-10.drawio.png" alt="SCALE-Sim TPU Validation Overview" class="hero-img">
               <figcaption style="margin-top: 8px; font-size: 0.85rem; color: #666; font-style: italic; text-align: center;">Figure: SCALE-Sim TPU post-silicon evaluation on Google TPU v4 and TPU v6e</figcaption>
             </figure>
           </div>
@@ -411,35 +484,46 @@
         <div class="organizer-grid">
           <div class="organizer-card">
             <img src="images/people/krishna.png"  alt="Dr. Tushar Krishna" class="org-photo" />
-            <div>
+            <div class="org-info">
               <div class="org-name"><a href="https://tusharkrishna.ece.gatech.edu/">Dr. Tushar Krishna</a></div>
-              <div class="org-title">Associate Professor, <br>Georgia Institute of Technology &nbsp;&nbsp; <a href="mailto:tushar@ece.gatech.edu">tushar@ece.gatech.edu</a> </div>
-              <div><a href="https://www.linkedin.com/in/tushar-krishna-a60b0970/" class="org-linkedin" aria-label="Dr. Tushar Krishna LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a></div>
+              <div class="org-title">Associate Professor,<br>Georgia Institute of Technology</div>
+              <div class="org-links">
+                <a href="mailto:tushar@ece.gatech.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/tushar-krishna-a60b0970/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
             </div>
           </div>
           <div class="organizer-card">
             <img src="images/people/ritik.png" alt="Ritik Raj" class="org-photo" />
-            <div>
+            <div class="org-info">
               <div class="org-name"><a href="https://github.com/ritikraj7">Ritik Raj</a></div>
-              <div class="org-title">Ph.D. Student,  <br>Georgia Institute of Technology &nbsp;&nbsp; <a href="mailto:ritik.raj@gatech.edu">ritik.raj@gatech.edu</a></div>
-                <div> <a href="https://www.linkedin.com/in/ritik-raj-04810b17b/" class="org-linkedin" aria-label="Ritik Raj LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a></div>
+              <div class="org-title">Ph.D. Student,<br>Georgia Institute of Technology</div>
+              <div class="org-links">
+                <a href="mailto:ritik.raj@gatech.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/ritik-raj-04810b17b/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
             </div>
           </div>
           <div class="organizer-card">
             <img src="images/people/jingtian.png" alt="Jingtian Dang" class="org-photo" />
-            <div>
+            <div class="org-info">
               <div class="org-name"><a href="https://synergy.ece.gatech.edu/members/" >Jingtian Dang</a></div>
-              <div class="org-title">Ph.D. Student,  <br>Georgia Institute of Technology &nbsp;&nbsp;
-                 <a href="mailto:dangjingtian@gatech.edu">dangjingtian@gatech.edu</a> 
-                 <a href="https://www.linkedin.com/in/jingtian-dang-568615207/" class="org-linkedin" aria-label="Jingtian Dang LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a></div>
+              <div class="org-title">Ph.D. Student,<br>Georgia Institute of Technology</div>
+              <div class="org-links">
+                <a href="mailto:dangjingtian@gatech.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/jingtian-dang-568615207/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
             </div>
           </div>
           <div class="organizer-card">
             <img src="images/people/sarbartha.jpg" alt="Dr. Sarbartha Banerjee" class="org-photo" />
-            <div>
+            <div class="org-info">
               <div class="org-name"><a href="https://sites.google.com/view/sarbartha/bio" >Dr. Sarbartha Banerjee</a></div>
-              <div class="org-title">Postdoctoral Fellow,  <br>Georgia Institute of Technology &nbsp;&nbsp; <a href="mailto:sbanerjee76@gatech.edu">sbanerjee76@gatech.edu</a> </div>
-              <div><a href="https://www.linkedin.com/in/sarbartha-banerjee-6945b242/" class="org-linkedin" aria-label="Dr. Sarbartha Banerjee LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a></div>
+              <div class="org-title">Postdoctoral Fellow,<br>Georgia Institute of Technology</div>
+              <div class="org-links">
+                <a href="mailto:sbanerjee76@gatech.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/sarbartha-banerjee-6945b242/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -447,18 +531,24 @@
         <div class="organizer-grid">
           <div class="organizer-card">
             <img src="images/people/suvinay.jpg" alt="Dr.Suvinay Subramanian" class="org-photo" />
-            <div>
+            <div class="org-info">
               <div class="org-name"><a href="https://suvinay.github.io/" >Dr. Suvinay Subramanian</a></div>
-              <div class="org-title">Computer Architect, Google &nbsp;&nbsp; <a href="mailto:suvinay@google.com">suvinay@google.com</a></div>
-              <div><a href="https://www.linkedin.com/in/suvinay-subramanian-53163b20a/" class="org-linkedin" aria-label="Dr. Suvinay Subramanian LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a></div>
+              <div class="org-title">Computer Architect, Google</div>
+              <div class="org-links">
+                <a href="mailto:suvinay@google.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/suvinay-subramanian-53163b20a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
             </div>
           </div>
           <div class="organizer-card">
             <img src="images/people/samajdar.jpg" alt="Dr. Ananda Samajdar" class="org-photo" />
-            <div>
+            <div class="org-info">
               <div class="org-name"><a href="https://anands09.github.io/" >Dr. Ananda Samajdar</a></div>
-              <div class="org-title">Research Staff Member, IBM T.J. Watson Research Center &nbsp;&nbsp; <a href="mailto:ananda.samajdar@ibm.com">ananda.samajdar@ibm.com</a></div>
-              <div><a href="https://www.linkedin.com/in/anandsamajdar/" class="org-linkedin" aria-label="Dr. Ananda Samajdar LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a></div>
+              <div class="org-title">Research Staff Member, IBM T.J. Watson Research Center</div>
+              <div class="org-links">
+                <a href="mailto:ananda.samajdar@ibm.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/anandsamajdar/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
             </div>
           </div>
         </div>
