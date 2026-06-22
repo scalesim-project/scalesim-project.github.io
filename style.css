@@ -613,3 +613,65 @@ div.sponsor-ask {
   content: "Note: This page is outdated. ";
   font-weight: bold;
 }
+
+/* Organizer photo layout */
+.organizer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.organizer-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  background-color: #f9fafb;
+}
+.organizer-card img.org-photo {
+  width: 2in;
+  height: 2in;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.organizer-card > div {
+  min-width: 0;
+}
+.organizer-card .org-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.organizer-card .org-title {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+.organizer-card .org-linkedin img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+.organizer-card .org-linkedin {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (max-width: 900px) {
+  .organizer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .organizer-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .organizer-card img.org-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
