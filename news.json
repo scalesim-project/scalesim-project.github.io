@@ -1,5 +1,10 @@
 [
   {
+    "date": "June 2026",
+    "type": "tutorial",
+    "title": "We hosted <a href='tutorial-isca2026.html'>SCALE-Sim tutorial</a> at ISCA 2026."
+  },
+  {
     "date": "December 2025",
     "type": "validation",
     "title": "SCALE-Sim validation results against TPU v4 and v6e are now available <a href='validation.html'>here</a>."
